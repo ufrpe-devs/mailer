@@ -1,0 +1,28 @@
+{
+  "name": "mailer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/scripts/development.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ufrpe-devs/mailer.git"
+  },
+  "keywords": [],
+  "author": "Italo Sousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ufrpe-devs/mailer/issues"
+  },
+  "homepage": "https://github.com/ufrpe-devs/mailer#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "livereload": "^0.9.3",
+    "nodemon": "^2.0.12"
+  }
+}

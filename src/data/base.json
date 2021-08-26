@@ -1,0 +1,12 @@
+{
+  "logo": {
+    "link": "https://github.com/ufrpe-devs",
+    "image": "https://raw.githubusercontent.com/ufrpe-devs/comunidade/main/media/ufrpe-devs-logo.svg"
+  },
+  "footer": {
+    "unsub": {
+      "link": "",
+      "text": "cancelar inscrição"
+    }
+  }
+}
