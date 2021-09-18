@@ -1,0 +1,50 @@
+{
+  "sections": [
+    {
+      "component": "logo",
+      "data": {
+        "link": "http://www.example.com/",
+        "image": "https://via.placeholder.com/165"
+      }
+    },
+    {
+      "component": "header",
+      "data": {
+        "title": "Title text goes here",
+        "text": "Another text goes here"
+      }
+    },
+    {
+      "component": "full-image",
+      "data": {
+        "link": "http://www.example.com/",
+        "image": "https://via.placeholder.com/1200x800"
+      }
+    },
+    {
+      "component": "content-image-button",
+      "data": {
+        "image": "https://via.placeholder.com/115",
+        "paragraph1": "Paragraph 1",
+        "paragraph2": "Paragraph 2",
+        "button": {
+          "link": "http://www.example.com/",
+          "text": "Click"
+        }
+      }
+    },
+    {
+      "component": "image-container",
+      "data": {
+        "link": "http://www.example.com/",
+        "image": "https://via.placeholder.com/1200x800"
+      }
+    },
+    {
+      "component": "paragraph",
+      "data": {
+        "text": "Another text goes here [link example](http://example.com) aaaa [link example](http://example.com)"
+      }
+    }
+  ]
+}
