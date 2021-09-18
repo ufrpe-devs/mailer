@@ -34,7 +34,7 @@ const renderSection = (section) => {
   return ejs.render(template, section.data);
 };
 
-module.exports = () => {
+module.exports = (options) => {
   const data = loadData();
   const content = loadContent();
 
@@ -45,5 +45,5 @@ module.exports = () => {
     "utf-8"
   );
 
-  return ejs.render(template, { ...data, sections });
+  return ejs.render(template, { ...data, ...options, sections });
 };
