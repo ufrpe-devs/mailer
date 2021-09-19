@@ -1,4 +1,4 @@
-const marked = require("marked");
+const marked = require('marked');
 
 const renderer = {
   link(href, _, text) {

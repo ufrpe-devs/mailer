@@ -1,21 +1,21 @@
-const fs = require("fs");
-const path = require("path");
-const ejs = require("ejs");
+const fs = require('fs');
+const path = require('path');
+const ejs = require('ejs');
 
-const renderMd = require("./markdown");
+const renderMd = require('./markdown');
 
 const loadData = () => {
   const data = fs.readFileSync(
-    path.join(__dirname, "../data/base.json"),
-    "utf-8"
+    path.join(__dirname, '../data/base.json'),
+    'utf-8'
   );
   return JSON.parse(data);
 };
 
 const loadContent = () => {
   const data = fs.readFileSync(
-    path.join(__dirname, "../data/content.json"),
-    "utf-8"
+    path.join(__dirname, '../data/content.json'),
+    'utf-8'
   );
   return JSON.parse(data);
 };
@@ -23,7 +23,7 @@ const loadContent = () => {
 const renderSection = (section) => {
   const template = fs.readFileSync(
     path.join(__dirname, `../templates/components/${section.component}.ejs`),
-    "utf-8"
+    'utf-8'
   );
 
   // simple text
@@ -41,8 +41,8 @@ module.exports = (options) => {
   const sections = content.sections.map((section) => renderSection(section));
 
   const template = fs.readFileSync(
-    path.join(__dirname, "../templates/template.ejs"),
-    "utf-8"
+    path.join(__dirname, '../templates/template.ejs'),
+    'utf-8'
   );
 
   return ejs.render(template, { ...data, ...options, sections });

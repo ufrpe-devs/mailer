@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/scripts/development.js",
-    "send": "node src/scripts/sender.js"
+    "mailer": "node src/scripts/sender.js",
+    "format": "prettier . --check --ignore-path .gitignore",
+    "format:fix": "prettier . --ignore-path .gitignore --write"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,9 @@
     "url": "https://github.com/ufrpe-devs/mailer/issues"
   },
   "homepage": "https://github.com/ufrpe-devs/mailer#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  },
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
