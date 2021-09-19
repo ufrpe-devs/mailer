@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/scripts/development.js"
+    "start": "nodemon src/scripts/development.js",
+    "send": "node src/scripts/sender.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "marked": "^3.0.4",
+    "nodemailer": "^6.6.3",
     "nodemon": "^2.0.12",
+    "prompts": "^2.4.1",
     "reload": "^3.2.0"
   }
 }
