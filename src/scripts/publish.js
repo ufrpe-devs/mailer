@@ -4,8 +4,8 @@ const path = require('path');
 module.exports = ({ subject }) =>
   new Promise((resolve) => {
     ghpages.publish(
-      path.join(__dirname, '../../build'),
-      { add: true, message: subject, src: path.join(__dirname, '../../build') },
+      'build',
+      { add: true, message: subject, src: '**/*.html', branch: 'gh-pages' },
       (err) => {
         if (err) {
           console.log(err);
