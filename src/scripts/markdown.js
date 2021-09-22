@@ -3,7 +3,7 @@ const marked = require('marked');
 const renderer = {
   link(href, _, text) {
     return `
-    <a href="${href}" style="color:#e50d70;text-decoration:underline;">${text}</a>
+    <a href="${href}" style="color: <%= theme.colors.textHighlight %>;text-decoration:underline;">${text}</a>
   `;
   },
 };

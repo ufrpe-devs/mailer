@@ -1,12 +1,21 @@
 {
   "logo": {
     "link": "https://github.com/ufrpe-devs",
-    "image": "https://raw.githubusercontent.com/ufrpe-devs/comunidade/main/media/ufrpe-devs-logo.svg"
+    "image": "https://i.imgur.com/irkDJMm.png"
   },
   "footer": {
-    "unsub": {
-      "link": "",
-      "text": "cancelar inscrição"
+    "text": "UFRPE Devs"
+  },
+  "theme": {
+    "colors": {
+      "background": "#0E1117",
+      "backgroundSecondary": "#161B22",
+      "backgroundTertiary": "#FFFFFF",
+      "brand": "#122E4B",
+      "textLight": "#FFFFFF",
+      "textHighlight": "#3AAAFF",
+      "textDark": "#363636",
+      "border": "#CCCCCC"
     }
   }
 }

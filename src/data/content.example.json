@@ -1,13 +1,6 @@
 {
   "sections": [
     {
-      "component": "logo",
-      "data": {
-        "link": "http://www.example.com/",
-        "image": "https://via.placeholder.com/165"
-      }
-    },
-    {
       "component": "header",
       "data": {
         "title": "Title text goes here",

@@ -1,5 +1,10 @@
 <tr>
-  <td style="padding: 30px; background-color: #ffffff">
+  <td
+    style="
+      padding: 30px;
+      background-color: <%= theme.colors.backgroundTertiary %>;
+    "
+  >
     <h1
       style="
         margin-top: 0;
@@ -12,15 +17,6 @@
     >
       <%= title %>
     </h1>
-    <p style="margin: 0">
-      <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus
-      adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi porttitor,
-      <a
-        href="http://www.example.com/"
-        style="color: #e50d70; text-decoration: underline"
-        >eget accumsan dictum</a
-      >, nisi libero ultricies ipsum, in posuere mauris neque at erat. -->
-      <%= text %>
-    </p>
+    <p style="margin: 0"><%= text %></p>
   </td>
 </tr>

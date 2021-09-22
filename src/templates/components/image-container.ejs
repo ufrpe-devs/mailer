@@ -5,9 +5,8 @@
       font-size: 24px;
       line-height: 28px;
       font-weight: bold;
-      background-color: #ffffff;
-      border-bottom: 1px solid #f0f0f5;
-      border-color: rgba(201, 201, 207, 0.35);
+      background-color: <%= theme.colors.backgroundTertiary %>;
+      border-bottom: 1px solid <%= theme.colors.border %>;
     "
   >
     <a href="<%= link %>" style="text-decoration: none"
@@ -20,7 +19,7 @@
           height: auto;
           border: none;
           text-decoration: none;
-          color: #363636;
+          color: <%= theme.colors.textDark %>;
         "
     /></a>
   </td>

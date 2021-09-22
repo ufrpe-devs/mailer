@@ -50,5 +50,7 @@ module.exports = (options) => {
     'utf-8'
   );
 
-  return ejs.render(template, { ...data, ...options, sections });
+  const timestamp = new Date(Date.now()).toLocaleString().split(',')[0];
+
+  return ejs.render(template, { ...data, ...options, sections, timestamp });
 };

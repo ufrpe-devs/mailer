@@ -3,9 +3,8 @@
     style="
       padding: 35px 30px 11px 30px;
       font-size: 0;
-      background-color: #ffffff;
-      border-bottom: 1px solid #f0f0f5;
-      border-color: rgba(201, 201, 207, 0.35);
+      background-color: <%= theme.colors.backgroundTertiary %>;
+      border-bottom: 1px solid <%= theme.colors.border %>;
     "
   >
     <!--[if mso]>
@@ -23,7 +22,7 @@
         text-align: left;
         font-family: Arial, sans-serif;
         font-size: 14px;
-        color: #363636;
+        color: <%= theme.colors.textDark %>;
       "
     >
       <img
@@ -48,7 +47,7 @@
         font-family: Arial, sans-serif;
         font-size: 16px;
         line-height: 22px;
-        color: #363636;
+        color: <%= theme.colors.textDark %>;
       "
     >
       <p style="margin-top: 0; margin-bottom: 12px"><%= paragraph1 %></p>
@@ -57,14 +56,14 @@
         <a
           href="<%= button.link %>"
           style="
-            background: #ff3884;
+            background: <%= theme.colors.textHighlight %>;
             text-decoration: none;
             padding: 10px 25px;
-            color: #ffffff;
+            color: <%= theme.colors.textLight %>;
             border-radius: 4px;
             display: inline-block;
             mso-padding-alt: 0;
-            text-underline-color: #ff3884;
+            text-underline-color: <%= theme.colors.textHighlight %>;
           "
           ><!--[if mso
             ]><i
