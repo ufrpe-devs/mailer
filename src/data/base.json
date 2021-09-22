@@ -3,6 +3,10 @@
     "link": "https://github.com/ufrpe-devs",
     "image": "https://i.imgur.com/irkDJMm.png"
   },
+  "header": "[DEV] UFRPE Devs - Mailer",
+  "metadata": {
+    "link": ""
+  },
   "footer": {
     "text": "UFRPE Devs"
   },

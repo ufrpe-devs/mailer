@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="x-apple-disable-message-reformatting" />
-    <title></title>
+    <title><%= header %></title>
     <!--[if mso]>
       <style>
         table {
@@ -188,7 +188,14 @@
                   <p
                     style="margin-top: 10px; font-size: 10px; line-height: 20px"
                   >
-                    Recife - PE <%= timestamp %>
+                    <a
+                      href="<%= metadata.link %>"
+                      style="
+                        color: <%= theme.colors.textLight %>;
+                        text-decoration: underline;
+                      "
+                      >Versão web</a
+                    >
                   </p>
                 </td>
               </tr>
