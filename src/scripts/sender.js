@@ -50,7 +50,7 @@ const confirm = [
     from: "${config.username}" <${config.from}>
     to: ${config.to}
     subject: ${config.subject}
-    rendered: file:///${__dirname}/build/${id}.html
+    rendered: file://${path.join(__dirname, '../../build', `${id}.html`)}
   `);
 
   const confirmResponse = await prompts(confirm);

@@ -5,8 +5,8 @@ const slugify = require('slugify');
 const render = require('./core');
 
 module.exports = ({ subject }) => {
-  const slug = slugify(subject);
-  const id = `${new Date().toISOString().split('T')[0]}-${slug}`.toLowerCase();
+  const slug = slugify(subject, { lower: true, strict: true });
+  const id = `${new Date().toISOString().split('T')[0]}-${slug}`;
 
   const metadata = {
     id,
