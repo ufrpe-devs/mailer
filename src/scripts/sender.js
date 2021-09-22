@@ -5,6 +5,7 @@ const prompts = require('prompts');
 const simpleGit = require('simple-git');
 
 const build = require('./build');
+const publish = require('./publish');
 
 const git = simpleGit();
 
@@ -49,13 +50,19 @@ const confirm = [
     from: "${config.username}" <${config.from}>
     to: ${config.to}
     subject: ${config.subject}
-    rendered: file:///${__dirname}/build/${id}
+    rendered: file:///${__dirname}/build/${id}.html
   `);
 
   const confirmResponse = await prompts(confirm);
 
   if (!confirmResponse.isOk) {
     console.log('Exiting...');
+    return;
+  }
+
+  const published = await publish(config);
+  if (!published) {
+    console.log('Error on publish...');
     return;
   }
 

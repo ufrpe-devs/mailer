@@ -1,3 +1,4 @@
 node_modules/
 src/data/content.json
 src/data/config.json
+build/

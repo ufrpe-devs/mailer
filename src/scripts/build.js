@@ -23,5 +23,5 @@ module.exports = ({ subject }) => {
     path.join(__dirname, '../../build/', `${id}.html`),
     rendered
   );
-  return { metadata, rendered };
+  return { ...metadata, rendered };
 };

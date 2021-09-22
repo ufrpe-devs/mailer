@@ -8,8 +8,7 @@
     "mailer": "node src/scripts/sender.js",
     "build": "node src/scripts/build.js",
     "format": "prettier . --check --ignore-path .gitignore",
-    "format:fix": "prettier . --ignore-path .gitignore --write",
-    "pub": "git subtree push --prefix build origin gh-pages"
+    "format:fix": "prettier . --ignore-path .gitignore --write"
   },
   "repository": {
     "type": "git",
@@ -28,6 +27,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "gh-pages": "^3.2.3",
     "marked": "^3.0.4",
     "nodemailer": "^6.6.3",
     "nodemon": "^2.0.12",
