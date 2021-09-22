@@ -33,6 +33,7 @@
     "nodemon": "^2.0.12",
     "prompts": "^2.4.1",
     "reload": "^3.2.0",
+    "simple-git": "^2.45.1",
     "slugify": "^1.6.0"
   }
 }

@@ -1,4 +1,5 @@
 {
+  "subject": "Email subject goes here",
   "sections": [
     {
       "component": "header",

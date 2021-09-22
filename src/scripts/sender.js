@@ -1,53 +1,77 @@
 const nodemailer = require('nodemailer');
-const render = require('./core');
-
+const fs = require('fs');
+const path = require('path');
 const prompts = require('prompts');
+const simpleGit = require('simple-git');
+
+const build = require('./build');
+
+const git = simpleGit();
+
+const loadConfig = () => {
+  const data = fs.readFileSync(
+    path.join(__dirname, '../data/config.json'),
+    'utf-8'
+  );
+  return JSON.parse(data);
+};
 
 const questions = [
   {
     type: 'text',
-    name: 'username',
-    message: 'What is the user name?',
-  },
-  {
-    type: 'text',
     name: 'email',
-    message: 'What is the sender email address?',
+    message: '[Credentials] Email:',
   },
   {
-    type: 'text',
-    name: 'pass',
-    message: 'What about the password?',
+    type: 'password',
+    name: 'password',
+    message: '[Credentials] Password:',
   },
+];
+
+const confirm = [
   {
-    type: 'text',
-    name: 'subject',
-    message: 'What is the subject?',
-  },
-  {
-    type: 'text',
-    name: 'recipients',
-    message: 'Hho will receive the email?',
-    initial: 'use the , for multiple recipients address',
+    type: 'confirm',
+    name: 'isOk',
+    message: 'Are you sure that you want to send the above email?',
+    initial: false,
   },
 ];
 
 (async () => {
+  const config = loadConfig();
+
   const response = await prompts(questions);
+
+  const { id, rendered } = build(config);
+
+  console.log(`
+    from: "${config.username}" <${config.from}>
+    to: ${config.to}
+    subject: ${config.subject}
+    rendered: file:///${__dirname}/build/${id}
+  `);
+
+  const confirmResponse = await prompts(confirm);
+
+  if (!confirmResponse.isOk) {
+    console.log('Exiting...');
+    return;
+  }
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: response.email,
-      pass: response.pass,
+      pass: response.password,
     },
   });
 
   const mailOptions = {
-    from: `"${response.username}" <${response.email}>`,
-    to: response.recipients,
-    subject: response.subject,
-    html: render({ development: false }),
+    from: `"${config.username}" <${config.from}>`,
+    to: config.to,
+    subject: config.subject,
+    html: rendered,
   };
 
   transporter.sendMail(mailOptions, function (error, info) {
