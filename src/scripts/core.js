@@ -20,7 +20,7 @@ const loadContent = () => {
   return JSON.parse(data);
 };
 
-const renderSection = (section) => {
+const renderSection = (section, data) => {
   const template = fs.readFileSync(
     path.join(__dirname, `../templates/components/${section.component}.ejs`),
     'utf-8'
@@ -28,17 +28,22 @@ const renderSection = (section) => {
 
   // simple text
   if (section.data.text) {
-    section.data.text = renderMd.parseInline(section.data.text);
+    section.data.text = ejs.render(
+      renderMd.parseInline(section.data.text),
+      data
+    );
   }
 
-  return ejs.render(template, section.data);
+  return ejs.render(template, { ...section.data, ...data });
 };
 
 module.exports = (options) => {
   const data = loadData();
   const content = loadContent();
 
-  const sections = content.sections.map((section) => renderSection(section));
+  const sections = content.sections.map((section) =>
+    renderSection(section, data)
+  );
 
   const template = fs.readFileSync(
     path.join(__dirname, '../templates/template.ejs'),
