@@ -34,7 +34,7 @@ const renderSection = (section, data) => {
     );
   }
 
-  return ejs.render(template, { ...section.data, ...data });
+  return ejs.render(template, { style: '', ...section, ...data });
 };
 
 module.exports = (options) => {

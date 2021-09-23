@@ -6,12 +6,12 @@
       line-height: 28px;
       font-weight: bold;
       background-color: <%= theme.colors.backgroundTertiary %>;
-      border-bottom: 1px solid <%= theme.colors.border %>;
+      <%= style %>
     "
   >
-    <a href="<%= link %>" style="text-decoration: none"
+    <a href="<%= data.link %>" style="text-decoration: none"
       ><img
-        src="<%= image %>"
+        src="<%= data.image %>"
         width="540"
         alt=""
         style="

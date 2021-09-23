@@ -26,7 +26,7 @@
       "
     >
       <img
-        src="<%= image %>"
+        src="<%= data.image %>"
         width="115"
         alt=""
         style="width: 80%; max-width: 115px; margin-bottom: 20px"
@@ -54,7 +54,7 @@
       <p style="margin-top: 0; margin-bottom: 18px"><%= paragraph2 %></p>
       <p style="margin: 0">
         <a
-          href="<%= button.link %>"
+          href="<%= data.button.link %>"
           style="
             background: <%= theme.colors.textHighlight %>;
             text-decoration: none;
@@ -75,7 +75,7 @@
               >&nbsp;</i
             ><!
           [endif]--><span style="mso-text-raise: 10pt; font-weight: bold"
-            ><%= button.text %></span
+            ><%= data.button.text %></span
           ><!--[if mso
             ]><i style="letter-spacing: 25px; mso-font-width: -100%"
               >&nbsp;</i
